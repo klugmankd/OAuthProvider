@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello OAuthProvider!'
+    return 'Hello Front-end!'
 
 
 if __name__ == '__main__':
