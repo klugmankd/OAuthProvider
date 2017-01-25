@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="wrapper">
+    <div id="mainBlock">
+        <div class="mainLogo"></div>
+        <div class="mainForm">
+            <div class="mainFormTitle">{{ formTitle }}</div>
+            <form class="form" autocomplete="off">
+                <div class="formFieldBlock">
+                    <label for="username"><div id="usernameIcon" class="formFieldIcon"></div></label>
+                    <input type="text" id="username" name="username" class="formField" placeholder="Username">
+                </div>
+                <div class="formFieldBlock">
+                    <label for="password"><div id="passwordIcon" class="formFieldIcon"></div></label>
+                    <input type="password" id="password" name="password" class="formField" placeholder="Password">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

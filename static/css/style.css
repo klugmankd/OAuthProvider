@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/background.svg");
+    background-size: cover;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#wrapper #mainBlock {
+    width: 56%;
+    margin-left: 20%;
+    padding: 2%;
+}
+
+#wrapper #mainBlock .mainLogo {
+    display: inline-block;
+    width: 20%;
+    height: 20vh;
+    margin-left: 38%;
+    padding: 2%;
+    background: url("../img/logo.svg");
+    background-size: cover;
+}
+
+#wrapper #mainBlock .mainForm {
+    width: 54%;
+    margin-top: 2%;
+    margin-left: 20%;
+    padding: 3%;
+    text-align: center;
+    background-color: rgba(60, 112, 160, .25);
+    border-radius: 10px;
+}
+
+#wrapper #mainBlock .mainForm .mainFormTitle {
+    display:inline-block;
+    width: 90%;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #ff6f40;
+    text-transform: uppercase;
+    padding: 3%;
+    border-bottom: 2px solid orange;
+    margin: 1%;
+}
+
+#wrapper #mainBlock .mainForm .form {
+    width: 80%;
+    margin-left: 10%;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock {
+    display: inline-block;
+    width: 95%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    /*padding: 5%;*/
+    background-color: rgba(201, 141, 93, .6);
+    border-radius: 7px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+    display: inline-block;
+    padding: 5%;
+    background-size: cover;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock #usernameIcon {
+    background: url("../img/user.svg") center no-repeat;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock #passwordIcon {
+    background: url("../img/key.svg") center no-repeat;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+    display: inline-block;
+    width: 70%;
+    font-size: 1.2em;
+    padding: 5%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+    color: rgb(255, 163, 63);
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder {
+    color: rgb(255, 187, 114);
+}
