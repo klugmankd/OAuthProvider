@@ -3,22 +3,35 @@
 {% block content %}
 <div id="wrapper">
     <div id="mainBlock">
-        <div class="mainLogo"></div>
+        <div class="mainLogo"><img src="{{ url_for("static", filename="img/logo.svg") }}" alt=""></div>
         <div class="mainForm">
             <div class="mainFormTitle">{{ formTitle }}</div>
             <form class="form" autocomplete="off">
                 <div class="formFieldBlock">
-                    <label for="username"><div id="usernameIcon" class="formFieldIcon"></div></label>
-                    <input type="text" id="username" name="username" class="formField" placeholder="Username">
+                    <label for="username">
+                        <div id="usernameIcon" class="formFieldIcon">
+                            <img src="{{ url_for("static", filename="img/user.svg") }}" alt="">
+                        </div>
+                    </label>
+                    <input type="text" id="username" name="username" class="formField animation" placeholder="Username">
                 </div>
                 <div class="formFieldBlock">
-                    <label for="password"><div id="passwordIcon" class="formFieldIcon"></div></label>
-                    <input type="password" id="password" name="password" class="formField" placeholder="Password">
+                    <label for="password">
+                        <div id="passwordIcon" class="formFieldIcon">
+                            <img src="{{ url_for("static", filename="img/key.svg") }}" alt="">
+                        </div>
+                    </label>
+                    <input type="password" id="password" name="password" class="formField animation" placeholder="Password">
                 </div>
                 <div class="formFieldBlock">
-                    <label for="confirm"><div id="passwordIcon" class="formFieldIcon"></div></label>
-                    <input type="password" id="confirm" name="password" class="formField" placeholder="Confirm password">
+                    <label for="confirm">
+                        <div id="passwordIcon" class="formFieldIcon">
+                            <img src="{{ url_for("static", filename="img/key.svg") }}" alt="">
+                        </div>
+                    </label>
+                    <input type="password" id="confirm" name="password" class="formField animation" placeholder="Confirm password">
                 </div>
+                <input type="button" id="password" name="password" class="formButton animation" value="Sign up">
             </form>
         </div>
     </div>

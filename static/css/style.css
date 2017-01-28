@@ -13,29 +13,34 @@ body {
 }
 
 #wrapper #mainBlock {
-    width: 56%;
+    width: 58%;
     margin-left: 20%;
-    padding: 2%;
+    padding: 1%;
 }
 
 #wrapper #mainBlock .mainLogo {
     display: inline-block;
     width: 20%;
     height: 20vh;
-    margin-left: 38%;
-    padding: 2%;
-    background: url("../img/logo.svg");
+    margin-left: 39%;
+    padding: 1% 1% 0;
     background-size: cover;
 }
 
+#wrapper #mainBlock .mainLogo img {
+    width: 96%;
+    padding: 2%;
+}
+
 #wrapper #mainBlock .mainForm {
-    width: 54%;
+    width: 56%;
     margin-top: 2%;
     margin-left: 20%;
-    padding: 3%;
+    padding: 2%;
     text-align: center;
     background-color: rgba(60, 112, 160, .25);
     border-radius: 10px;
+    border: 1px solid rgba(255, 187, 114, .5);
 }
 
 #wrapper #mainBlock .mainForm .mainFormTitle {
@@ -60,7 +65,6 @@ body {
     width: 95%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    /*padding: 5%;*/
     background-color: rgba(201, 141, 93, .6);
     border-radius: 7px;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
@@ -68,8 +72,14 @@ body {
 
 #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
     display: inline-block;
-    padding: 5%;
+    padding: 3% 2%;
+    width: 20%;
+    float: left;
     background-size: cover;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon img {
+    width: 50%;
 }
 
 #wrapper #mainBlock .mainForm .form .formFieldBlock #usernameIcon {
@@ -82,15 +92,57 @@ body {
 
 #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
     display: inline-block;
-    width: 70%;
+    width: 64%;
     font-size: 1.2em;
     padding: 5%;
     background-color: rgba(255, 255, 255, 0);
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0);
     outline: none;
     color: rgb(255, 163, 63);
+    float: right;
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder {
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+    border-bottom: 2px solid orange;
+    background-color: rgba(201, 141, 93, .5);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder,
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-moz-placeholder,
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField:-ms-input-placeholder {
     color: rgb(255, 187, 114);
+}
+
+#wrapper #mainBlock .mainForm .form .formButton:hover {
+    cursor: pointer;
+    background-color: rgb(255, 104, 70);
+    color: rgb(255, 200, 95);
+    border-bottom: 2px solid rgb(252, 156, 88);
+}
+
+#wrapper #mainBlock .mainForm .form .formButton {
+    display: inline-block;
+    width: 95%;
+    margin-top: 2.5%;
+    margin-bottom: 1%;
+    background-color: rgba(252, 111, 88, .7);
+    border-radius: 7px;
+    padding: 5%;
+    border: 2px solid rgba(255, 255, 255, 0);
+    font-size: 1.3em;
+    text-transform: uppercase;
+    outline: none;
+    color: rgb(255, 178, 95);
+    font-weight: bold;
+}
+
+.animation {
+    text-decoration: none;
+    -webkit-trasition: all.6s ease;
+    -moz-transition: all.6s ease;
+    -o-transition: all.6s ease;
+    -ms-transition: all.6s ease;
+    transition: all.6s ease;
 }
