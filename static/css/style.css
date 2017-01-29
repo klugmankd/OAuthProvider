@@ -35,18 +35,24 @@ body {
         font-size: 2.5em;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
         font-size: 1.2em;
         width: 64%;
         padding: 5%;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField:focus {
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formFieldIcon {
         width: 20%;
         padding: 3% 2%;
     }
@@ -79,18 +85,24 @@ body {
         font-size: 2.4em;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
         font-size: 1.2em;
         width: 64%;
         padding: 5%;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField:focus {
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formFieldIcon {
         width: 20%;
         padding: 3% 2%;
     }
@@ -123,18 +135,24 @@ body {
         margin-left: 34%;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
         font-size: 1em;
         width: 64%;
         padding: 5%;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField:focus {
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formFieldIcon {
         width: 15%;
         padding: 3% 2%;
     }
@@ -168,17 +186,23 @@ body {
         font-size: 2em;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
         font-size: 0.8em;
         width: 90%;
         padding: 4%;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField:focus {
         border-radius: 7px;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formFieldIcon {
         width: 0;
         padding: 0;
     }
@@ -211,17 +235,23 @@ body {
         margin-left: 29%;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
         font-size: 0.8em;
         width: 90%;
         padding: 4%;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField:focus,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField:focus {
         border-radius: 7px;
     }
 
-    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsValid .formFieldIcon,
+    #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formFieldIcon {
         width: 0;
         padding: 0;
     }
@@ -264,36 +294,60 @@ body {
     width: 80%;
     margin-left: 10%;
 }
-
-#wrapper #mainBlock .mainForm .form .formFieldBlock {
+#wrapper #mainBlock .mainForm .form .formFieldBlock,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid {
     display: inline-block;
     width: 95%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    background-color: rgba(201, 141, 93, .6);
     border-radius: 7px;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock {
+    background-color: rgba(201, 141, 93, .6);
     border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+#wrapper #mainBlock .mainForm .form .formFieldIsValid {
+    background-color: rgba(107, 210, 95, .6);
+    border-bottom: 2px solid rgba(250, 255, 0, .9);
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid {
+    background-color: rgba(255, 28, 28, .7);
+    border-bottom: 2px solid rgb(255, 178, 95);
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .formFieldIcon,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formFieldIcon {
     display: inline-block;
     float: left;
     background-size: cover;
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon img {
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon img,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .formFieldIcon img,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formFieldIcon img {
     width: 50%;
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock #usernameIcon {
+#wrapper #mainBlock .mainForm .form .formFieldBlock #usernameIcon,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid #usernameIcon,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid #usernameIcon {
     background: url("../img/user.svg") center no-repeat;
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock #passwordIcon {
+#wrapper #mainBlock .mainForm .form .formFieldBlock #passwordIcon,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid #passwordIcon,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid #passwordIcon {
     background: url("../img/key.svg") center no-repeat;
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid rgba(255, 255, 255, 0);
@@ -307,7 +361,19 @@ body {
     background-color: rgba(201, 141, 93, .5);
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder {
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .formField:focus {
+    background-color: rgba(80, 222, 60, .6);
+    color: #f7f7f7;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField:focus {
+    background-color: rgba(255, 47, 47, .6);
+    color: #f7f7f7;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .formField::-webkit-input-placeholder,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField::-webkit-input-placeholder {
     color: rgb(255, 187, 114);
 }
 

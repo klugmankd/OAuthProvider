@@ -6,8 +6,8 @@
         <div class="mainLogo"><img src="{{ url_for("static", filename="img/logo.svg") }}" alt=""></div>
         <div class="mainForm">
             <div class="mainFormTitle">{{ formTitle }}</div>
-            <form class="form" autocomplete="off">
-                <div class="formFieldBlock">
+            <form id="formReg" class="form" onchange="validate(this)" autocomplete="off">
+                <div id="fieldUsername" class="formFieldBlock">
                     <label for="username">
                         <div id="usernameIcon" class="formFieldIcon">
                             <img src="{{ url_for("static", filename="img/user.svg") }}" alt="">
@@ -15,7 +15,7 @@
                     </label>
                     <input type="text" id="username" name="username" class="formField animation" placeholder="Username">
                 </div>
-                <div class="formFieldBlock">
+                <div id="fieldPassword" class="formFieldBlock">
                     <label for="password">
                         <div id="passwordIcon" class="formFieldIcon">
                             <img src="{{ url_for("static", filename="img/key.svg") }}" alt="">
@@ -23,15 +23,15 @@
                     </label>
                     <input type="password" id="password" name="password" class="formField animation" placeholder="Password">
                 </div>
-                <div class="formFieldBlock">
+                <div id="fieldConfirm" class="formFieldBlock">
                     <label for="confirm">
                         <div id="passwordIcon" class="formFieldIcon">
                             <img src="{{ url_for("static", filename="img/key.svg") }}" alt="">
                         </div>
                     </label>
-                    <input type="password" id="confirm" name="password" class="formField animation" placeholder="Confirm password">
+                    <input type="password" id="confirm" name="confirm" class="formField animation" placeholder="Confirm password">
                 </div>
-                <input type="button" id="password" name="password" class="formButton animation" value="Sign up">
+                <input type="button" id="signUp" name="signUp" class="formButton animation" onclick="sendForm(document.getElementById('formReg'))" value="Sign up">
             </form>
         </div>
     </div>
