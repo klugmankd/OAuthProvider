@@ -12,17 +12,227 @@ body {
     width: 100%;
 }
 
-#wrapper #mainBlock {
-    width: 58%;
-    margin-left: 20%;
-    padding: 1%;
+@media (min-width: 1000px) {
+    #wrapper #mainBlock {
+        width: 58%;
+        margin-left: 20%;
+        padding: 1%;
+    }
+
+    #wrapper #mainBlock .mainLogo {
+        width: 20%;
+        margin-left: 39%;
+    }
+
+    #wrapper #mainBlock .mainForm {
+        width: 56%;
+        margin-top: 2%;
+        margin-left: 20%;
+        padding: 2%;
+    }
+
+    #wrapper #mainBlock .mainForm .mainFormTitle {
+        font-size: 2.5em;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+        font-size: 1.2em;
+        width: 64%;
+        padding: 5%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+        width: 20%;
+        padding: 3% 2%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formButton {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 999px) and (min-width: 830px) {
+    #wrapper #mainBlock {
+        width: 68%;
+        margin-left: 15%;
+        padding: 1%;
+    }
+
+    #wrapper #mainBlock .mainForm {
+        width: 56%;
+        margin-top: 2%;
+        margin-left: 20%;
+        padding: 2%;
+    }
+
+    #wrapper #mainBlock .mainLogo {
+        width: 26%;
+        margin-left: 36%;
+    }
+
+    #wrapper #mainBlock .mainForm .mainFormTitle {
+        font-size: 2.4em;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+        font-size: 1.2em;
+        width: 64%;
+        padding: 5%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+        width: 20%;
+        padding: 3% 2%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formButton {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 829px) and (min-width: 620px) {
+    #wrapper #mainBlock {
+        width: 78%;
+        margin-left: 10%;
+        padding: 1%;
+    }
+
+    #wrapper #mainBlock .mainForm {
+        width: 66%;
+        margin-top: 2%;
+        margin-left: 15%;
+        padding: 2%;
+    }
+
+    #wrapper #mainBlock .mainForm .mainFormTitle {
+        font-size: 2.2em;
+    }
+
+    #wrapper #mainBlock .mainLogo {
+        width: 30%;
+        margin-left: 34%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+        font-size: 1em;
+        width: 64%;
+        padding: 5%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+        width: 15%;
+        padding: 3% 2%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formButton {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 619px) and (min-width: 450px) {
+    #wrapper #mainBlock {
+        width: 88%;
+        margin-left: 5%;
+        padding: 1%;
+    }
+
+    #wrapper #mainBlock .mainLogo {
+        width: 30%;
+        margin-left: 34%;
+    }
+
+    #wrapper #mainBlock .mainForm {
+        width: 76%;
+        margin-top: 2%;
+        margin-left: 10%;
+        padding: 2%;
+    }
+
+
+    #wrapper #mainBlock .mainForm .mainFormTitle {
+        font-size: 2em;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+        font-size: 0.8em;
+        width: 90%;
+        padding: 4%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+        border-radius: 7px;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+        width: 0;
+        padding: 0;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formButton {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 449px) {
+    #wrapper #mainBlock {
+        width: 92%;
+        margin-left: 1%;
+        padding: 3%;
+    }
+
+    #wrapper #mainBlock .mainForm {
+        width: 86%;
+        margin-top: 2%;
+        margin-left: 5%;
+        padding: 2%;
+    }
+
+    #wrapper #mainBlock .mainForm .mainFormTitle {
+        font-size: 1.8em;
+    }
+
+    #wrapper #mainBlock .mainLogo {
+        width: 40%;
+        margin-left: 29%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
+        font-size: 0.8em;
+        width: 90%;
+        padding: 4%;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
+        border-radius: 7px;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
+        width: 0;
+        padding: 0;
+    }
+
+    #wrapper #mainBlock .mainForm .form .formButton {
+        font-size: 0.9em;
+    }
 }
 
 #wrapper #mainBlock .mainLogo {
     display: inline-block;
-    width: 20%;
-    height: 20vh;
-    margin-left: 39%;
     padding: 1% 1% 0;
     background-size: cover;
 }
@@ -33,10 +243,6 @@ body {
 }
 
 #wrapper #mainBlock .mainForm {
-    width: 56%;
-    margin-top: 2%;
-    margin-left: 20%;
-    padding: 2%;
     text-align: center;
     background-color: rgba(60, 112, 160, .25);
     border-radius: 10px;
@@ -44,10 +250,9 @@ body {
 }
 
 #wrapper #mainBlock .mainForm .mainFormTitle {
-    display:inline-block;
+    display: inline-block;
     width: 90%;
     font-weight: bold;
-    font-size: 2.5em;
     color: #ff6f40;
     text-transform: uppercase;
     padding: 3%;
@@ -72,8 +277,6 @@ body {
 
 #wrapper #mainBlock .mainForm .form .formFieldBlock .formFieldIcon {
     display: inline-block;
-    padding: 3% 2%;
-    width: 20%;
     float: left;
     background-size: cover;
 }
@@ -92,9 +295,6 @@ body {
 
 #wrapper #mainBlock .mainForm .form .formFieldBlock .formField {
     display: inline-block;
-    width: 64%;
-    font-size: 1.2em;
-    padding: 5%;
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid rgba(255, 255, 255, 0);
     outline: none;
@@ -105,21 +305,10 @@ body {
 #wrapper #mainBlock .mainForm .form .formFieldBlock .formField:focus {
     border-bottom: 2px solid orange;
     background-color: rgba(201, 141, 93, .5);
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder,
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-moz-placeholder,
-#wrapper #mainBlock .mainForm .form .formFieldBlock .formField:-ms-input-placeholder {
+#wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder {
     color: rgb(255, 187, 114);
-}
-
-#wrapper #mainBlock .mainForm .form .formButton:hover {
-    cursor: pointer;
-    background-color: rgb(255, 104, 70);
-    color: rgb(255, 200, 95);
-    border-bottom: 2px solid rgb(252, 156, 88);
 }
 
 #wrapper #mainBlock .mainForm .form .formButton {
@@ -131,11 +320,17 @@ body {
     border-radius: 7px;
     padding: 5%;
     border: 2px solid rgba(255, 255, 255, 0);
-    font-size: 1.3em;
     text-transform: uppercase;
     outline: none;
     color: rgb(255, 178, 95);
     font-weight: bold;
+}
+
+#wrapper #mainBlock .mainForm .form .formButton:hover {
+    cursor: pointer;
+    background-color: rgb(255, 104, 70);
+    color: rgb(255, 200, 95);
+    border-bottom: 2px solid rgb(252, 156, 88);
 }
 
 .animation {
