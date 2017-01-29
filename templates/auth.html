@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="wrapper">
+    <div id="mainBlock">
+        <div class="mainLogo"><img src="{{ url_for("static", filename="img/logo.svg") }}" alt=""></div>
+        <div class="mainForm">
+            <div class="mainFormTitle">{{ formTitle }}</div>
+            <form id="formAuth" class="form" onchange="validate(this)" autocomplete="off">
+                <div id="fieldUsername" class="formFieldBlock">
+                    <label for="username">
+                        <div id="usernameIcon" class="formFieldIcon">
+                            <img src="{{ url_for("static", filename="img/user.svg") }}" alt="">
+                        </div>
+                    </label>
+                    <input type="text" id="username" name="username" class="formField animation" placeholder="Username">
+                </div>
+                <div id="fieldPassword" class="formFieldBlock">
+                    <label for="password">
+                        <div id="passwordIcon" class="formFieldIcon">
+                            <img src="{{ url_for("static", filename="img/key.svg") }}" alt="">
+                        </div>
+                    </label>
+                    <input type="password" id="password" name="password" class="formField animation" placeholder="Password">
+                </div>
+                <input type="button" id="signIn" name="signIn" class="formButton animation" onclick="sendForm(document.getElementById('formAuth'))" value="Sign in">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
