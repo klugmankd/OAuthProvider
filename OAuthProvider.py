@@ -14,7 +14,7 @@ mysql.init_app(app)
 
 @app.route('/')
 def index():
-    return render_template("index.html", msg='asdasd')
+    return render_template("index.html", msg='hello')
 
 
 @app.route('/auth', methods=['POST', 'GET'])
@@ -24,20 +24,13 @@ def auth():
     else:
         username = request.form['username']
         password = request.form['password']
-        # print username + password
         cursor = mysql.connect().cursor()
-        cursor.execute("SELECT * from user")
-        # cursor.execute("'SELECT * from user where username='+username+' and password ='+password")
+        cursor.execute("SELECT password from user WHERE username ='" + username + "'")
         data = cursor.fetchone()
-        # if data is None:
-        #     return render_template("index.html", msg='aga')
-        # else:
-        return render_template("index.html", msg=data)
-
-
-# @app.route('/auth', methods=['GET'])
-# def auth():
-#     return render_template("auth.html", title="Login form", formTitle="auth")
+        if data[0] == password:
+            return render_template("index.html", msg='success')
+        else:
+            return render_template("index.html", msg='denied')
 
 
 @app.route('/reg')
