@@ -261,10 +261,32 @@ body {
     }
 }
 
+#wrapper #mainBlock #links {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#wrapper #mainBlock #links a {
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 2%;
+    border: 2px solid orange;
+    border-radius: 20px;
+}
+
 #wrapper #mainBlock .mainLogo {
     display: inline-block;
     padding: 1% 1% 0;
     background-size: cover;
+    margin-top: 20px;
+}
+
+#wrapper #mainBlock #links a:hover {
+    background-color: rgba(201, 141, 93, .5);
 }
 
 #wrapper #mainBlock .mainLogo img {

@@ -14,8 +14,7 @@ mysql.init_app(app)
 
 @app.route('/')
 def index():
-    session['username'] = 'root'
-    return render_template("index.html", msg=session['username'])
+    return render_template("index.html", title="Welcome")
 
 
 @app.route('/auth', methods=['POST', 'GET'])
@@ -30,9 +29,9 @@ def auth():
         data = cursor.fetchone()
         if data[0] == password:
             # session['username'] == username
-            return render_template("index.html", msg='success')
+            return render_template("index.html", title='success')
         else:
-            return render_template("index.html", msg='denied')
+            return render_template("index.html", title='denied')
 
 
 @app.route('/reg', methods=['POST', 'GET'])

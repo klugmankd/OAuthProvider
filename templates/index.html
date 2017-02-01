@@ -1,1 +1,15 @@
-{{ msg }}
+{% extends "base.html" %}
+{% block content %}
+    <div id="wrapper">
+        <div id="mainBlock">
+            <div id="links">
+                <a href="/auth" class="animation">Auth</a>
+                <a href="/reg" class="animation">Registration</a>
+            </div>
+            <div class="mainLogo"><img src="{{ url_for("static", filename="img/logo.svg") }}" alt=""></div>
+            <div class="mainForm">
+                <div class="mainFormTitle">{{ title }}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

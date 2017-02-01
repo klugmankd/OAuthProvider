@@ -187,9 +187,9 @@ function confirmPassword(password, confirm) {
 function sendForm(form) {
     var data = validate(form);
 
-    if (data['status']) {
-        alert("form was sending");
-    } else alert("form is not valid");
+    // if (data['status']) {
+    //     alert("form was sending");
+    // } else alert("form is not valid");
 
     // must be ajax query
 }
