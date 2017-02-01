@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session
 from flask import request
 from flaskext.mysql import MySQL
 
@@ -14,7 +14,8 @@ mysql.init_app(app)
 
 @app.route('/')
 def index():
-    return render_template("index.html", msg='hello')
+    session['username'] = 'root'
+    return render_template("index.html", msg=session['username'])
 
 
 @app.route('/auth', methods=['POST', 'GET'])
@@ -28,14 +29,34 @@ def auth():
         cursor.execute("SELECT password from user WHERE username ='" + username + "'")
         data = cursor.fetchone()
         if data[0] == password:
+            # session['username'] == username
             return render_template("index.html", msg='success')
         else:
             return render_template("index.html", msg='denied')
 
 
-@app.route('/reg')
+@app.route('/reg', methods=['POST', 'GET'])
 def reg():
-    return render_template("reg.html", title="Reg form", formTitle="reg")
+    if request.method == 'GET':
+        return render_template("reg.html", title="Reg form", formTitle="reg")
+    else:
+        username = request.form['username']
+        password = request.form['password']
+        email = request.form['email']
+        first_name = request.form['firstName']
+        last_name = request.form['lastName']
+        date = request.form['birthday']
+        gender = request.form['gender']
+
+        cursor = mysql.connect().cursor()
+        query = "INSERT INTO user(date,gender,password, email,username,first_name,last_name) " \
+                "VALUES(%s,%s,%s,%s,%s,%s,%s)"
+
+        args = (date, gender, password, email, username, first_name, last_name)
+        cursor.execute(query, args)
+        mysql.connect().commit()
+        return render_template("index.html", msg='success')
+        # cursor.close()
 
 
 if __name__ == '__main__':
