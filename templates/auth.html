@@ -6,7 +6,7 @@
         <div class="mainLogo"><img src="{{ url_for("static", filename="img/logo.svg") }}" alt=""></div>
         <div class="mainForm">
             <div class="mainFormTitle">{{ formTitle }}</div>
-            <form id="formAuth" class="form" onchange="validate(this)" autocomplete="off">
+            <form id="formAuth" class="form" onchange="validate(this)" autocomplete="off" method="post" action="/auth">
                 <div id="fieldUsername" class="formFieldBlock">
                     <label for="username">
                         <div id="usernameIcon" class="formFieldIcon">
@@ -23,7 +23,7 @@
                     </label>
                     <input type="password" id="password" name="password" class="formField animation" placeholder="Password">
                 </div>
-                <input type="button" id="signIn" name="signIn" class="formButton animation" onclick="sendForm(document.getElementById('formAuth'))" value="Sign in">
+                <input type="submit" id="signIn" name="signIn" class="formButton animation" onclick="sendForm(document.getElementById('formAuth'))" value="Sign in">
             </form>
         </div>
     </div>

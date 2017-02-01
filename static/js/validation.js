@@ -1,21 +1,37 @@
 var regExp = {
     username: /^[a-zA-Z][a-zA-Z0-9-_.]{1,20}$/,
-    password: /^[a-zA-Z0-9]+$/,
-    confirm: /^[a-zA-Z0-9]+$/
+    email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    name: /^[a-zA-Z]+$/,
+    password: /^[a-zA-Z0-9]+$/
 };
 
 function getData(form) {
     var username = form.username.value,
+        email,
+        firstName,
+        lastName,
+        birthday,
+        gender,
         password = form.password.value,
         confirm,
         resultArray;
 
     if (form == document.getElementById('formReg')) {
+        email = form.email.value;
+        firstName = form.firstName.value;
+        lastName = form.lastName.value;
+        birthday = form.birthday.value;
+        gender = form.gender.value;
         confirm = form.confirm.value;
     }
 
     resultArray = {
         username: username,
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        birthday: birthday,
+        gender: gender,
         password: password,
         confirm: confirm
     };
@@ -32,8 +48,12 @@ function validate(form) {
 
     resultCheck = {
         username: regExp['username'].test(data['username']),
+        email: regExp['email'].test(data['email']),
+        firstName: regExp['name'].test(data['firstName']),
+        lastName: regExp['name'].test(data['lastName']),
+        // birthday: regExp['date'].test(data['birthday']),
         password: regExp['password'].test(data['password']),
-        confirm: regExp['confirm'].test(data['confirm'])
+        confirm: regExp['password'].test(data['confirm'])
     };
 
     message = {
@@ -43,9 +63,17 @@ function validate(form) {
     };
 
     var fieldUsername = document.getElementById("fieldUsername"),
+        fieldEmail = document.getElementById("fieldEmail"),
+        fieldFirstName = document.getElementById("fieldFirstName"),
+        fieldLastName = document.getElementById("fieldLastName"),
+        fieldBirthday = document.getElementById("fieldBirthday"),
+        fieldGender = document.getElementById("fieldGender"),
         fieldPassword = document.getElementById("fieldPassword"),
         fieldConfirm = document.getElementById("fieldConfirm"),
         username = document.getElementById("username"),
+        email = document.getElementById("email"),
+        firstName = document.getElementById("firstName"),
+        lastName = document.getElementById("lastName"),
         password = document.getElementById("password"),
         confirm = document.getElementById("confirm");
 
@@ -74,6 +102,58 @@ function validate(form) {
     }
 
     if (form == document.getElementById('formReg')) {
+        if (resultCheck['email']) {
+            fieldEmail.className = "formFieldIsValid";
+            status = true;
+        } else if (data['email'] == "") {
+            fieldEmail.className = "formFieldBlock";
+        } else {
+            fieldEmail.className = "formFieldIsNotValid";
+            email.value = "";
+            email.placeholder = message['email'];
+            status = false;
+        }
+
+        if (resultCheck['firstName']) {
+            fieldFirstName.className = "formFieldIsValid";
+            status = true;
+        } else if (data['firstName'] == "") {
+            fieldFirstName.className = "formFieldBlock";
+        } else {
+            fieldFirstName.className = "formFieldIsNotValid";
+            firstName.value = "";
+            firstName.placeholder = message['firstName'];
+            status = false;
+        }
+
+        if (resultCheck['lastName']) {
+            fieldLastName.className = "formFieldIsValid";
+            status = true;
+        } else if (data['lastName'] == "") {
+            fieldLastName.className = "formFieldBlock";
+        } else {
+            fieldLastName.className = "formFieldIsNotValid";
+            lastName.value = "";
+            lastName.placeholder = message['lastName'];
+            status = false;
+        }
+
+        if (data['birthday'] == "") {
+            fieldBirthday.className = "formFieldIsNotValid";
+            status = false;
+        } else {
+            fieldBirthday.className = "formFieldIsValid";
+            status = true;
+        }
+
+        if (data['gender'] == "") {
+            fieldGender.className = "formFieldIsNotValid";
+            status = false;
+        } else {
+            fieldGender.className = "formFieldIsValid";
+            status = true;
+        }
+
         if (resultCheck['confirm'] && confirmPassword(data['password'], data['confirm'])) {
             fieldConfirm.className = "formFieldIsValid";
             status = true;
@@ -90,6 +170,10 @@ function validate(form) {
     resultData = {
         status: status,
         username: data['username'],
+        email: data['email'],
+        firstName: data['firstName'],
+        lastName: data['lastName'],
+        birthday: data['birthday'],
         password: data['password']
     };
 

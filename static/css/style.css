@@ -189,7 +189,7 @@ body {
     #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
     #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
     #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
-        font-size: 0.8em;
+        font-size: 1em;
         width: 90%;
         padding: 4%;
     }
@@ -208,7 +208,7 @@ body {
     }
 
     #wrapper #mainBlock .mainForm .form .formButton {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 }
 
@@ -238,7 +238,7 @@ body {
     #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
     #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
     #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
-        font-size: 0.8em;
+        font-size: 1em;
         width: 90%;
         padding: 4%;
     }
@@ -257,7 +257,7 @@ body {
     }
 
     #wrapper #mainBlock .mainForm .form .formButton {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 }
 
@@ -333,18 +333,6 @@ body {
     width: 50%;
 }
 
-#wrapper #mainBlock .mainForm .form .formFieldBlock #usernameIcon,
-#wrapper #mainBlock .mainForm .form .formFieldIsValid #usernameIcon,
-#wrapper #mainBlock .mainForm .form .formFieldIsNotValid #usernameIcon {
-    background: url("../img/user.svg") center no-repeat;
-}
-
-#wrapper #mainBlock .mainForm .form .formFieldBlock #passwordIcon,
-#wrapper #mainBlock .mainForm .form .formFieldIsValid #passwordIcon,
-#wrapper #mainBlock .mainForm .form .formFieldIsNotValid #passwordIcon {
-    background: url("../img/key.svg") center no-repeat;
-}
-
 #wrapper #mainBlock .mainForm .form .formFieldBlock .formField,
 #wrapper #mainBlock .mainForm .form .formFieldIsValid .formField,
 #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField {
@@ -369,6 +357,56 @@ body {
 #wrapper #mainBlock .mainForm .form .formFieldIsNotValid .formField:focus {
     background-color: rgba(255, 47, 47, .6);
     color: #f7f7f7;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .radio,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .radio,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .radio {
+    width: 60%;
+    padding: 4%;
+    float: left;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .radio input[type=radio],
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .radio input[type=radio],
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .radio input[type=radio] {
+    display: none;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .radio label:before,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .radio label:before,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .radio label:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-color: rgba(201, 141, 93, .5);
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px orange;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .radio input[type=radio]:checked + label:before,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .radio input[type=radio]:checked + label:before,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .radio input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: rgb(255, 163, 63);
+    font-size: 50px;
+    text-align: center;
+    line-height: 27px;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .radio label:before,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .radio label:before,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .radio label:before{
+    border-radius: 50%;
+}
+
+#wrapper #mainBlock .mainForm .form .formFieldBlock .radio label,
+#wrapper #mainBlock .mainForm .form .formFieldIsNotValid .radio label,
+#wrapper #mainBlock .mainForm .form .formFieldIsValid .radio label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 13px;
 }
 
 #wrapper #mainBlock .mainForm .form .formFieldBlock .formField::-webkit-input-placeholder,
